@@ -403,46 +403,46 @@
   <!-- MODAL WINDOW -->
   <div class="backdrop">
     <div class="modal">
-      <button class="modal-btn-close">
+      <button class="modal-close">
         <svg class="icon-btn-close" width="8" height="8">
           <use href="./images/icons.svg#icon-close"></use>
         </svg>
       </button>
-      <p class="modal-text">Leave your contacts and we will call you back</p>
-      <form lass="modal-form" action="">
-        <label class="modal-form-description" for="">Name
+      <p class="modal-title">Leave your contacts and we will call you back</p>
+      <form lass="modal-form">
+        <label class="modal-form-description" for="user-name">Name
           <div class="modal-input-wrap">
-            <input type="text" />
+            <input class="modal-input" name="user-name" type="text" id="user-name" required />
             <svg class="modal-input-icon" width="18" height="18">
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
           </div>
         </label>
-        <label class="modal-form-description" for="">Phone
+        <label class="modal-form-description" for="user-tel">Phone
           <div class="modal-input-wrap">
-            <input type="text" />
+            <input class="modal-input" name="user-tel" type="tel" id="user-tel" required minlength="2" />
             <svg class="modal-input-icon" width="18" height="24">
               <use href="./images/icons.svg#icon-phone"></use>
             </svg>
           </div>
         </label>
-        <label class="modal-form-description" for="">Email
+        <label class="modal-form-description" for="user-email">Email
           <div class="modal-input-wrap">
-            <input type="text" />
+            <input class="modal-input" name="user-email" type="email" id="user-email" />
             <svg class="modal-input-icon" width="18" height="24">
               <use href="./images/icons.svg#icon-email"></use>
             </svg>
           </div>
         </label>
-        <label class="modal-form-description" for="">Comment
-          <textarea name="" rows="" cols="" placeholder="Text input"></textarea>
+        <label class="modal-form-description" for="user-text">Comment
+          <textarea class="modal-textarea" name="user-comment" id="user-text" placeholder="Text input"></textarea>
         </label>
         <label class="modal-checkbox">
-          <input type="checkbox" name="" value="" />
+          <input type="checkbox" name="" />
           I accept the terms and conditions of the
           <a href="">Privacy Policy</a>
         </label>
-        <button type="button" class="modal-btn-send">Send</button>
+        <button type="submit" class="modal-btn-send">Send</button>
       </form>
     </div>
   </div>
