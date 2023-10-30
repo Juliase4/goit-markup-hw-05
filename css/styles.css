@@ -548,9 +548,9 @@ h3 {
   background-color: rgba(46, 47, 66, 0.4);
 }
 
-.is-open {
+/* .is-open {
   visibility: visible;
-}
+} */
 
 .modal {
   position: absolute;
