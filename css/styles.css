@@ -685,14 +685,13 @@ button {
   height: 120px;
   padding: 8px 16px;
   resize: none;
-}
-
-.modal-textarea::placeholder {
   font-family: inherit;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
+}
 
+.modal-textarea::placeholder {
   color: rgba(46, 47, 66, 0.4);
 }
 
