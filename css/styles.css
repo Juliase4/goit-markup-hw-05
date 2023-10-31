@@ -703,8 +703,8 @@ button {
 }
 
 .modal-checkbox-icon {
-  display: inline-flex;
   position: absolute;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -727,7 +727,7 @@ button {
   border: none;
 }
 
-.modal-check-text {
+.modal-check-privacy {
   font-family: inherit;
   font-size: 12px;
   line-height: 1.17;
