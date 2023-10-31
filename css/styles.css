@@ -1,7 +1,16 @@
+:root {
+  --primary-brand-color: #4d5ae5;
+  --pressed-state-color: #404bbf;
+  --dark-color: #2e2f42;
+  --subtle-text-color: #8e8f99;
+  --light-color: #f4f4fd;
+  --wight-color: #ffffff;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
-  background-color: #ffffff;
+  background-color: var(--wight-color);
 }
 
 /* --- Утіліти --- */
@@ -64,7 +73,7 @@ h2 {
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
-  color: #2e2f42;
+  color: var(--dark-color);
 }
 
 h3 {
@@ -72,7 +81,7 @@ h3 {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #2e2f42;
+  color: var(--dark-color);
 }
 
 button {
@@ -100,11 +109,11 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-right: 76px;
-  color: #4d5ae5;
+  color: var(--primary-brand-color);
 }
 
 .bit-logo {
-  color: #2e2f42;
+  color: var(--dark-color);
 }
 
 .footer-logo {
@@ -129,14 +138,14 @@ button {
   letter-spacing: 0.02em;
   position: relative;
 
-  color: #2e2f42;
+  color: var(--dark-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-link:hover,
 .navigation-link:focus,
 .current {
-  color: #404bbf;
+  color: var(--pressed-state-color);
 }
 
 .active::after {
@@ -147,7 +156,7 @@ button {
   position: absolute;
   bottom: -1px;
   border-radius: 2px;
-  background: #404bbf;
+  background: var(--pressed-state-color);
 }
 
 .contacts-list {
@@ -166,7 +175,7 @@ button {
 
 .contacts-link:hover,
 .contacts-link:focus {
-  color: #404bbf;
+  color: var(--pressed-state-color);
 }
 
 .menu-link {
@@ -201,7 +210,7 @@ button {
   margin-right: auto;
   max-width: 496px;
 
-  color: #ffffff;
+  color: var(--wight-color);
 }
 
 .hero-button {
@@ -218,15 +227,15 @@ button {
   border-radius: 4px;
   margin: 0 auto;
 
-  color: #ffffff;
-  background-color: #4d5ae5;
+  color: var(--wight-color);
+  background-color: var(--primary-brand-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
 .hero-button:focus {
-  background-color: #404bbf;
+  background-color: var(--pressed-state-color);
 }
 
 /* --- OUR ADVANTAGES --- */
@@ -249,8 +258,8 @@ button {
   padding: 24px 100px;
   margin-bottom: 8px;
   border-radius: 4px;
-  border: 1px solid #8e8f99;
-  background: #f4f4fd;
+  border: 1px solid var(--subtle-text-color);
+  background-color: var(--light-color);
 }
 
 .advantages-subtitle {
@@ -259,7 +268,7 @@ button {
   line-height: 1.2;
   margin-bottom: 8px;
 
-  color: #2e2f42;
+  color: var(--dark-color);
 }
 
 .advantages-text {
@@ -270,7 +279,7 @@ button {
 
 /* --- TEAM --- */
 .team {
-  background-color: #f4f4fd;
+  background-color: var(--light-color);
 }
 
 .team-title {
@@ -295,7 +304,7 @@ button {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-  background-color: #ffffff;
+  background-color: var(--wight-color);
 }
 
 .team-name {
@@ -319,18 +328,18 @@ button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #4d5ae5;
+  background-color: var(--primary-brand-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: #f4f4fd;
+  fill: var(--light-color);
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-link:hover,
 .team-soc-link:focus {
-  background-color: #404bbf;
+  background-color: var(--pressed-state-color);
 }
 
 /* --- PORTFOLIO --- */
@@ -350,7 +359,7 @@ button {
 .portfolio-item {
   display: block;
   cursor: pointer;
-  background-color: #ffffff;
+  background-color: var(--wight-color);
   width: calc((100% - 48px) / 3);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -376,8 +385,8 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  color: #f4f4fd;
-  background-color: #4d5ae5;
+  color: var(--light-color);
+  background-color: var(--primary-brand-color);
 
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -408,7 +417,7 @@ button {
 /* --- FOOTER --- */
 .page-footer {
   padding: 100px 0;
-  background-color: #2e2f42;
+  background-color: var(--dark-color);
 }
 
 .page-footer .container {
@@ -424,11 +433,11 @@ button {
   display: inline-block;
   margin-bottom: 16px;
 
-  color: #4d5ae5;
+  color: var(--primary-brand-color);
 }
 
 .bitf-logo {
-  color: #f4f4fd;
+  color: var(--light-color);
 }
 
 .footer-text {
@@ -437,7 +446,7 @@ button {
   letter-spacing: 0.02em;
   width: 264px;
 
-  color: #f4f4fd;
+  color: var(--light-color);
 }
 
 .footer-soc {
@@ -450,7 +459,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
-  color: #ffffff;
+  color: var(--wight-color);
 }
 
 .footer-soc-list {
@@ -463,11 +472,11 @@ button {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #4d5ae5;
+  background-color: var(--primary-brand-color);
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: #f4f4fd;
+  fill: var(--light-color);
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -483,7 +492,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
-  color: #ffffff;
+  color: var(--wight-color);
 }
 
 .footer-subscribe-form {
@@ -505,12 +514,12 @@ button {
   outline: none;
   padding-left: 16px;
 
-  color: #ffffff;
+  color: var(--wight-color);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
 .footer-input::placeholder {
-  color: #ffffff;
+  color: var(--wight-color);
 }
 
 .footer-btn {
@@ -528,15 +537,15 @@ button {
   border-radius: 4px;
   border: transparent;
 
-  color: #ffffff;
-  background-color: #4d5ae5;
+  color: var(--wight-color);
+  background-color: var(--primary-brand-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-btn:hover,
 .footer-btn:focus {
-  background-color: #404bbf;
+  background-color: var(--pressed-state-color);
 }
 
 .icon-telegram {
@@ -596,13 +605,13 @@ button {
 .modal-close:hover,
 .modal-close:focus {
   border: none;
-  fill: #ffffff;
-  background-color: #404bbf;
+  fill: var(--wight-color);
+  background-color: var(--pressed-state-color);
 }
 
 .modal-close:active {
-  background-color: #404bbf;
-  fill: #ffffff;
+  background-color: var(--pressed-state-color);
+  fill: var(--wight-color);
 }
 
 .icon-btn-close {
@@ -617,16 +626,12 @@ button {
   text-align: center;
   margin-bottom: 16px;
 
-  color: #2e2f42;
+  color: var(--dark-color);
 }
 
 .modal-input-wrap,
 .modal-comment {
   margin-bottom: 8px;
-}
-
-.modal-comment {
-  margin-bottom: 16px;
 }
 
 .modal-form-description {
@@ -637,7 +642,7 @@ button {
   letter-spacing: 0.04em;
   margin-bottom: 4px;
 
-  color: #8e8f99;
+  color: var(--subtle-text-color);
 }
 
 .modal-form-input {
@@ -655,7 +660,7 @@ button {
   background-color: transparent;
   padding-left: 38px;
   outline: transparent;
-  color: #2e2f42;
+  color: var(--dark-color);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -665,11 +670,11 @@ button {
 
 .modal-input:focus,
 .modal-textarea:focus {
-  border-color: #4d5ae5;
+  border-color: var(--primary-brand-color);
 }
 
 .modal-input:focus + .modal-input-icon {
-  fill: #4d5ae5;
+  fill: var(--primary-brand-color);
 }
 
 .modal-input-icon {
@@ -677,8 +682,12 @@ button {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
-  fill: #2e2f42;
+  fill: var(--dark-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-comment {
+  margin-bottom: 16px;
 }
 
 .modal-textarea {
@@ -702,12 +711,21 @@ button {
   margin-bottom: 24px;
 }
 
+.modal-check-privacy {
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  margin-left: 24px;
+
+  color: var(--subtle-text-color);
+}
+
 .modal-checkbox-icon {
-  position: absolute;
   display: inline-flex;
+  position: absolute;
   align-items: center;
   justify-content: center;
-  text-align: center;
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -721,24 +739,14 @@ button {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-checkbox:checked + .modal-check-text > .modal-checkbox-icon {
-  background-color: #404bbf;
-  fill: #f4f4fd;
+.modal-checkbox:checked + .modal-check-privacy > .modal-checkbox-icon {
+  background-color: var(--pressed-state-color);
+  fill: var(--light-color);
   border: none;
 }
 
-.modal-check-privacy {
-  font-family: inherit;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  margin-left: 24px;
-
-  color: #8e8f99;
-}
-
 .modal-agreement-link {
-  color: #4d5ae5;
+  color: var(--primary-brand-color);
   text-decoration-line: underline;
 }
 
@@ -756,13 +764,13 @@ button {
   border-radius: 4px;
   margin: 0 auto;
 
-  color: #ffffff;
-  background-color: #4d5ae5;
+  color: var(--wight-color);
+  background-color: var(--primary-brand-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-send:hover,
 .modal-btn-send:focus {
-  background-color: #404bbf;
+  background-color: var(--pressed-state-color);
 }
