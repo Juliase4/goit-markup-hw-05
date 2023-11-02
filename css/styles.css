@@ -191,10 +191,8 @@ button {
   padding-top: 188px;
   padding-bottom: 188px;
   text-align: center;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)),
     url(../images/people-office.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -554,31 +552,39 @@ button {
 
 /* --- MODAL --- */
 .backdrop {
-  visibility: hidden;
+  position: fixed;
   width: 100%;
   height: 100%;
-  position: fixed;
   top: 0;
+  left: 0;
+  z-index: 99999999;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 
   background-color: rgba(46, 47, 66, 0.4);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.is-open {
+.backdrop.is-open {
   visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .modal {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 72px 24px 24px 24px;
   width: 408px;
   min-height: 584px;
   border-radius: 4px;
   background-color: #fcfcfc;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 72px 24px 24px 24px;
+
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -659,8 +665,8 @@ button {
   border: 1px solid rgba(46, 47, 66, 0.4);
   background-color: transparent;
   padding-left: 38px;
-  outline: transparent;
   color: var(--dark-color);
+  outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -673,10 +679,6 @@ button {
   border-color: var(--primary-brand-color);
 }
 
-.modal-input:focus + .modal-input-icon {
-  fill: var(--primary-brand-color);
-}
-
 .modal-input-icon {
   position: absolute;
   left: 16px;
@@ -684,6 +686,10 @@ button {
   transform: translateY(-50%);
   fill: var(--dark-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus+.modal-input-icon {
+  fill: var(--primary-brand-color);
 }
 
 .modal-comment {
@@ -707,7 +713,6 @@ button {
 }
 
 .agreement {
-  position: relative;
   margin-bottom: 24px;
 }
 
@@ -716,14 +721,12 @@ button {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  margin-left: 24px;
 
   color: var(--subtle-text-color);
 }
 
 .modal-checkbox-icon {
   display: inline-flex;
-  position: absolute;
   align-items: center;
   justify-content: center;
   width: 16px;
@@ -731,15 +734,14 @@ button {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   fill: transparent;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  margin-right: 8px;
+
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-checkbox:checked + .modal-check-privacy > .modal-checkbox-icon {
+.modal-checkbox:checked+.modal-check-privacy>.modal-checkbox-icon {
   background-color: var(--pressed-state-color);
   fill: var(--light-color);
   border: none;
